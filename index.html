@@ -1,11 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio de Sergio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-    
+  <div id="container">
+    <header>
+      <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+      </div>
+      <h1>Olá a todos! Me chamo Sergio👋</h1>
+    </header>
+
+    <section id="about">
+      <h2>Sobre Mim</h2>
+      <p>Desenvolvedor com foco em back-end, desenvolvimento de jogos e desenvolvimento web.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projetos Destacados</h2>
+      <div class="project-grid">
+        <div class="project">
+          <a href="https://github.com/SergioGTF/Site-pessoal" target="_blank">
+            <img src="https://via.placeholder.com/200x150" alt="Projeto 1">
+            <p>Site pessoal com intuito de servir como portfólio online e para auto promoção.</p>
+          </a>
+        </div>
+        <div class="project">
+          <a href="https://github.com/SergioGTF/Tech-Dungeons-2" target="_blank">
+            <img src="https://via.placeholder.com/200x150" alt="Projeto 2">
+            <p>Segundo jogo da saga Tech Dungeons.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="tech">
+      <h2>🚀 Tecnologias que uso:</h2>
+      <div class="tech-icons">
+        <img alt="JavaScript" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+        <img alt="HTML" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+        <img alt="CSS" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+        <img alt="C" src="https://cdn.worldvectorlogo.com/logos/c-1.svg">
+        <img alt="Java" src="https://cdn.worldvectorlogo.com/logos/java-4.svg">
+        <img alt="C++" src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg">
+        <img alt="C#" src="https://cdn.worldvectorlogo.com/logos/c--4.svg">
+        <img alt="UI/UX" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
+        <img alt="VSCode" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
+        <img alt="Visual Studio" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg">
+        <img alt="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+        <img alt="NodeJs" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+        <img alt="Raylib" src="https://th.bing.com/th/id/R.7c54bb1783af73666c12229682a68b19?rik=oxfzmOU4rTeJ9Q&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2ff%2ff4%2fRaylib_logo.png&ehk=CKLOco9mjDOBUVJgMps23gatd3tmsX%2b6f%2bzKEdLvt%2b4%3d&risl=&pid=ImgRaw&r=0">
+        <img alt="Allegro5" src="https://avatars.githubusercontent.com/u/7524022?s=48&v=4">
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </div>
 </body>
 </html>
