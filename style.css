@@ -4,68 +4,59 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 :root {
   --text-color: white;
-  --bg-url: url('./assets/bg-mobile.jpg');
+  --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.2);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url('./assets/moon-stars.svg');
+  --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
 .light {
   --text-color: black;
-  --bg-url: url('./assets/bg-mobile-light.jpg');
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.2);
   --highlight-color: rgba(0, 0, 0, 0.2);
-  --switch-bg-url: url('./assets/sun.svg');
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: var(--bg-url) no-repeat center center fixed;
   background-size: cover;
-  font-family: "Inter", sans-serif;
   color: var(--text-color);
+  font-family: "Inter", sans-serif;
 }
 
 #container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px;
+  max-width: 588px;
+  margin: 56px auto 0;
+  padding: 0 24px;
+  border-radius: 8px;
+  padding-bottom: 80px;
 }
 
-/* Header */
-header {
-  text-align: center;
-  padding: 24px;
-}
-
-header h1 {
-  font-size: 28px;
-}
-
-/* Switch */
 #switch {
-  position: relative;
+  position: fixed;
+  top: 16px;
+  right: 16px;
   width: 64px;
-  margin: 4px auto;
 }
 
 #switch button {
   width: 32px;
   height: 32px;
-  background: var(--switch-bg-url) no-repeat center;
+  background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
   position: absolute;
@@ -95,84 +86,105 @@ header h1 {
   border-radius: 9999px;
 }
 
-/* Sections */
-section {
-  padding: 24px 0;
+.tecnologias-grid img {
+  height: 35px;
+  width: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section h2 {
-  font-size: 24px;
-  margin-bottom: 16px;
+.tecnologias-grid img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-section p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Project Grid */
-.project-grid {
+#repos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
-.project a {
-  display: block;
+.repo-card {
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
   border-radius: 8px;
-  text-decoration: none;
-  color: var(--text-color);
-  overflow: hidden;
-}
-
-.project img {
-  width: 100%;
-  height: auto;
-}
-
-.project p {
   padding: 16px;
   text-align: center;
 }
 
-/* Technologies */
-.tech-icons {
+.repo-card a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+}
+
+ul {
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 16px;
-  justify-content: center;
-}
-
-.tech-icons img {
-  height: 30px;
-  width: 30px;
-}
-
-/* Footer */
-footer {
   padding: 24px 0;
-  text-align: center;
-  font-size: 14px;
 }
 
-/* Media Queries */
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+section h2 {
+  margin-bottom: 12px;
+}
+
+section p {
+  margin-bottom: 16px;
+}
+
+ul li a {
+  margin-bottom: 12px;
+}
+
+#about,
+#sobre-mim,
+#projetos,
+#tecnologias,
+#repos {
+  margin-bottom: 40px;
+}
+
+#tecnologias {
+  margin-bottom: 40px;
+}
+
 @media (min-width: 700px) {
   :root {
-    --bg-url: url('./assets/bg-desktop.jpg');
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
 
   .light {
-    --bg-url: url('./assets/bg-desktop-light.jpg');
+    --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 }
 
-/* Animation */
 @keyframes slide-in {
   from {
     left: 0;
   }
+
   to {
     left: 50%;
   }
@@ -181,8 +193,17 @@ footer {
 @keyframes slide-back {
   from {
     left: 50%;
-  } 
+  }
+
   to {
     left: 0;
   }
+}
+
+#projetos a {
+  color: var(--text-color);
+}
+
+#projetos a:hover {
+  color: var(--highlight-color);
 }
