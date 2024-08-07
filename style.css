@@ -170,6 +170,12 @@ ul li a {
   margin-bottom: 40px;
 }
 
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
 @media (min-width: 700px) {
   :root {
     --bg-url: url(./assets/bg-desktop.jpg);
@@ -207,3 +213,5 @@ ul li a {
 #projetos a:hover {
   color: var(--highlight-color);
 }
+
+
