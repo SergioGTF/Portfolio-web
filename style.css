@@ -192,9 +192,15 @@ ul li a {
   margin-bottom: 40px;
 }
 
-.tecnologia-categoria h3 {
-  margin-bottom: 16px;
+.tecnologia-categoria img {
+  margin-bottom: 25px;
 }
+
+.tecnologia-categoria h3 {
+  margin-bottom: 4px;
+}
+
+
 
 footer {
   padding: 24px 0;
