@@ -68,6 +68,32 @@ body {
   animation: slide-back 0.4s forwards;
 }
 
+h2 {
+  position: relative; 
+  display: inline-block;
+  padding-bottom: 4px; 
+}
+
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--text-color); 
+  transform: scaleX(0); 
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+h2:hover::after {
+  transform: scaleX(1); 
+  transform-origin: bottom left;
+}
+
+
 .light #switch button {
   animation: slide-in 0.4s forwards;
 }
