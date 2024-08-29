@@ -1,0 +1,64 @@
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,web,git
+
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,web,git
+
+### Git
+
+# Created by git for backups. To disable backups in Git:
+
+# $ git config --global mergetool.keepBackup false
+
+\*.orig
+
+# Created by git when using merge tools for conflicts
+
+_.BACKUP._
+_.BASE._
+_.LOCAL._
+_.REMOTE._
+_*BACKUP*_.txt
+_*BASE*_.txt
+_*LOCAL*_.txt
+_*REMOTE*_.txt
+
+### VisualStudioCode
+
+.vscode/_
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/_.code-snippets
+
+# Local History for Visual Studio Code
+
+.history/
+
+# Built Visual Studio Code Extensions
+
+\*.vsix
+
+### VisualStudioCode Patch
+
+# Ignore all local history of files
+
+.history
+.ionide
+
+### Web
+
+_.asp
+_.cer
+_.csr
+_.css
+_.htm
+_.html
+_.js
+_.jsp
+_.php
+_.rss
+_.wasm
+_.wat
+\*.xhtml
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,web,git
