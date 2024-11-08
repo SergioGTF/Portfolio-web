@@ -26,7 +26,7 @@ Este projeto é um portfólio pessoal que utiliza HTML, CSS e JavaScript para ap
 - **Ícones**: [Ionicons](https://ionicons.com)
 
 ## Estrutura do projeto
-
+```
 portfolio/
 │
 ├── assets/ # Imagens e ícones utilizados no site
@@ -36,3 +36,4 @@ portfolio/
 ├── script.js # Arquivo JavaScript para funcionalidades
 │
 └── index.html # Arquivo HTML principal
+```
